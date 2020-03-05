@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HelpdeskComponent implements OnInit {
 
+  oneAtATime = true
+  
   constructor() { }
 
   ngOnInit() {

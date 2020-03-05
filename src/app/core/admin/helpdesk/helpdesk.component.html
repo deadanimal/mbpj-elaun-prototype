@@ -23,10 +23,23 @@
         <div class="col-lg-7">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="m-0"></h4>
+                    <h4 class="m-0">Manual Pengguna</h4>
                 </div>
                 <div class="card-body">
-
+                    <accordion [isAnimated]="true" [closeOthers]="oneAtATime">
+                        <accordion-group>
+                            <h5 class="mb-0" accordion-heading>Cara membuat permohonan</h5>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </accordion-group>
+                        <accordion-group>
+                            <h5 class="mb-0" accordion-heading>Cara meluluskan permohonan</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </accordion-group>
+                        <accordion-group>
+                            <h5 class="mb-0" accordion-heading>Cara undo permohonan yang telah diluluskan</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </accordion-group>
+                    </accordion>
                 </div>
             </div>
         </div>
@@ -38,7 +51,7 @@
                             <h4 class="m-0">Versi Sistem</h4>
                         </div>
                         <div class="card-body">
-                            
+                            <p><span class="badge badge-pill badge-success">Terbaru</span> Versi 2.2.2</p>
                         </div>
                     </div>
                 </div>
@@ -59,9 +72,11 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label class="form-control-label">Aduan</label>
-                                <textarea class="form-control form-control-sm" placeholder="Isikan aduan anda"></textarea>
+                                <textarea class="form-control form-control-sm"
+                                    placeholder="Isikan aduan anda"></textarea>
                             </div>
-                            <span class="m-0 " style="font-size: 0.8rem">*Aduan akan dihantar kepada sekysen_aplikasi@mbpj.gov.my</span>
+                            <span class="m-0 " style="font-size: 0.8rem">*Aduan akan dihantar kepada
+                                sekysen_aplikasi@mbpj.gov.my</span>
                         </div>
                     </div>
                 </div>

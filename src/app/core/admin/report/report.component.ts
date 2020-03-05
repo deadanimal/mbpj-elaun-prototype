@@ -1,594 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
-const data = {
-  chart: {
-    showvalues: "0",
-    labeldisplay: "ROTATE",
-    rotatelabels: "1",
-    plothighlighteffect: "fadeout",
-    plottooltext: "$seriesName $label : <b>$dataValue</b>",
-    theme: "fusion"
-  },
-  axis: [
-    {
-      title: "Data 1",
-      titlepos: "left",
-      numberprefix: "$",
-      divlineisdashed: "1",
-      maxvalue: "100000",
-      dataset: [
-        {
-          seriesname: "Data 1",
-          linethickness: "3",
-          data: [
-            {
-              value: "38450.2"
-            },
-            {
-              value: "16544.4"
-            },
-            {
-              value: "10659.4"
-            },
-            {
-              value: "9657.4"
-            },
-            {
-              value: "9040.4"
-            },
-            {
-              value: "9040.4"
-            },
-            {
-              value: "6992.3"
-            },
-            {
-              value: "6650.5"
-            },
-            {
-              value: "6650.5"
-            },
-            {
-              value: "6337.2"
-            },
-            {
-              value: "5835.4"
-            },
-            {
-              value: "4582.9"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      title: "Data 2",
-      axisonleft: "1",
-      titlepos: "left",
-      numdivlines: "8",
-      divlineisdashed: "1",
-      maxvalue: "25",
-      numbersuffix: "%",
-      dataset: [
-        {
-          seriesname: "Data 2",
-          dashed: "1",
-          data: [
-            {
-              value: "17.23"
-            },
-            {
-              value: "7.41"
-            },
-            {
-              value: "4.78"
-            },
-            {
-              value: "4.33"
-            },
-            {
-              value: "4.05"
-            },
-            {
-              value: "4.05"
-            },
-            {
-              value: "3.13"
-            },
-            {
-              value: "2.98"
-            },
-            {
-              value: "2.98"
-            },
-            {
-              value: "2.84"
-            },
-            {
-              value: "2.62"
-            },
-            {
-              value: "2.05"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      title: "Data 3",
-      titlepos: "RIGHT",
-      axisonleft: "0",
-      numdivlines: "5",
-      numbersuffix: "",
-      divlineisdashed: "1",
-      maxvalue: "400000",
-      dataset: [
-        {
-          seriesname: "Data 3",
-          linethickness: "3",
-          data: [
-            {
-              value: "358196"
-            },
-            {
-              value: "166138"
-            },
-            {
-              value: "107288"
-            },
-            {
-              value: "97268"
-            },
-            {
-              value: "91098"
-            },
-            {
-              value: "91098"
-            },
-            {
-              value: "70617"
-            },
-            {
-              value: "67199"
-            },
-            {
-              value: "67199"
-            },
-            {
-              value: "64066"
-            },
-            {
-              value: "59048"
-            },
-            {
-              value: "46523"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      title: "Data 4",
-      titlepos: "RIGHT",
-      axisonleft: "0",
-      numdivlines: "5",
-      divlineisdashed: "1",
-      maxvalue: "20",
-      numbersuffix: "%",
-      dataset: [
-        {
-          seriesname: "Data 4",
-          dashed: "1",
-          data: [
-            {
-              value: "16.3"
-            },
-            {
-              value: "7.03"
-            },
-            {
-              value: "4.54"
-            },
-            {
-              value: "4.12"
-            },
-            {
-              value: "3.86"
-            },
-            {
-              value: "3.86"
-            },
-            {
-              value: "2.99"
-            },
-            {
-              value: "2.84"
-            },
-            {
-              value: "2.84"
-            },
-            {
-              value: "2.71"
-            },
-            {
-              value: "2.5"
-            },
-            {
-              value: "1.97"
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  categories: [
-    {
-      category: [
-        {
-          label: "2006"
-        },
-        {
-          label: "2007"
-        },
-        {
-          label: "2008"
-        },
-        {
-          label: "2009"
-        },
-        {
-          label: "2010"
-        },
-        {
-          label: "2011"
-        },
-        {
-          label: "2012"
-        },
-        {
-          label: "2013"
-        },
-        {
-          label: "2014"
-        },
-        {
-          label: "2015"
-        },
-        {
-          label: "2016"
-        },
-        {
-          label: "2017"
-        }
-      ]
-    }
-  ]
-};
-
-const data2 = {
-  chart: {
-    showhovereffect: "1",
-    drawverticaljoints: "1",
-    useforwardsteps: "0",
-    numberprefix: "$",
-    canvaspadding: "5",
-    plottooltext: "<b>$datavalue</b>",
-    theme: "fusion"
-  },
-  categories: [
-    {
-      category: [
-        {
-          label: "2011"
-        },
-        {
-          label: "2012"
-        },
-        {
-          label: "2013"
-        },
-        {
-          label: "2014"
-        },
-        {
-          label: "2015"
-        },
-        {
-          label: "2016"
-        },
-        {
-          label: "2017"
-        },
-        {
-          label: "2018"
-        },
-        {
-          label: "2019"
-        }
-      ]
-    }
-  ],
-  dataset: [
-    {
-      linethickness: "3",
-      data: [
-        {
-          value: ".10"
-        },
-        {
-          value: ".12"
-        },
-        {
-          value: ".18"
-        },
-        {
-          value: ".20"
-        },
-        {
-          value: ".28"
-        },
-        {
-          value: ".36"
-        },
-        {
-          value: ".42"
-        },
-        {
-          value: ".46"
-        },
-        {
-          value: ".49"
-        }
-      ]
-    }
-  ]
-};
-
-const data3 = {
-  chart: {
-    yaxisname: "# of Tickets",
-    subcaption: "Last week",
-    numdivlines: "3",
-    showvalues: "0",
-    legenditemfontsize: "15",
-    legenditemfontbold: "1",
-    plottooltext: "<b>$dataValue</b> Tickets $seriesName on $label",
-    theme: "fusion"
-  },
-  categories: [
-    {
-      category: [
-        {
-          label: "Jan 1"
-        },
-        {
-          label: "Jan 2"
-        },
-        {
-          label: "Jan 3"
-        },
-        {
-          label: "Jan 4"
-        },
-        {
-          label: "Jan 5"
-        },
-        {
-          label: "Jan 6"
-        },
-        {
-          label: "Jan 7"
-        }
-      ]
-    }
-  ],
-  dataset: [
-    {
-      seriesname: "Received",
-      data: [
-        {
-          value: "55"
-        },
-        {
-          value: "45"
-        },
-        {
-          value: "52"
-        },
-        {
-          value: "29"
-        },
-        {
-          value: "48"
-        },
-        {
-          value: "28"
-        },
-        {
-          value: "32"
-        }
-      ]
-    },
-    {
-      seriesname: "Resolved",
-      data: [
-        {
-          value: "50"
-        },
-        {
-          value: "30"
-        },
-        {
-          value: "49"
-        },
-        {
-          value: "22"
-        },
-        {
-          value: "43"
-        },
-        {
-          value: "14"
-        },
-        {
-          value: "31"
-        }
-      ]
-    }
-  ]
-};
-
-const data4 = {
-  chart: {
-    formatnumberscale: "0",
-    showvalues: "0",
-    drawcrossline: "1",
-    showsum: "1",
-    plottooltext: "$dataValue from $seriesName",
-    theme: "fusion"
-  },
-  categories: [
-    {
-      category: [
-        {
-          label: "2014"
-        },
-        {
-          label: "2015"
-        },
-        {
-          label: "2016"
-        },
-        {
-          label: "2017"
-        },
-        {
-          label: "2018"
-        },
-        {
-          label: "2019"
-        }
-      ]
-    }
-  ],
-  dataset: [
-    {
-      seriesname: "Data 1",
-      data: [
-        {
-          value: "400"
-        },
-        {
-          value: "830"
-        },
-        {
-          value: "500"
-        },
-        {
-          value: "420"
-        },
-        {
-          value: "790"
-        },
-        {
-          value: "380"
-        }
-      ]
-    },
-    {
-      seriesname: "Data 2",
-      data: [
-        {
-          value: "350"
-        },
-        {
-          value: "620"
-        },
-        {
-          value: "410"
-        },
-        {
-          value: "370"
-        },
-        {
-          value: "720"
-        },
-        {
-          value: "310"
-        }
-      ]
-    },
-    {
-      seriesname: "Data 3",
-      data: [
-        {
-          value: "210"
-        },
-        {
-          value: "400"
-        },
-        {
-          value: "450"
-        },
-        {
-          value: "180"
-        },
-        {
-          value: "570"
-        },
-        {
-          value: "270"
-        }
-      ]
-    },
-    {
-      seriesname: "Data 4",
-      data: [
-        {
-          value: "180"
-        },
-        {
-          value: "330"
-        },
-        {
-          value: "230"
-        },
-        {
-          value: "160"
-        },
-        {
-          value: "440"
-        },
-        {
-          value: "350"
-        }
-      ]
-    },
-    {
-      seriesname: "Data 5",
-      data: [
-        {
-          value: "60"
-        },
-        {
-          value: "200"
-        },
-        {
-          value: "200"
-        },
-        {
-          value: "50"
-        },
-        {
-          value: "230"
-        },
-        {
-          value: "150"
-        }
-      ]
-    }
-  ]
-};
+import * as am4core from "@amcharts/amcharts4/core";
+import * as am4charts from "@amcharts/amcharts4/charts";
+import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 
 @Component({
   selector: 'app-report',
@@ -597,21 +10,343 @@ const data4 = {
 })
 export class ReportComponent implements OnInit {
 
-  width = '100%';
-  height = '100%';
-  type = "multiaxisline";
-  dataFormat = "json";
-  dataSource = data;
-  dataSource2 = data2
-  type2 = "msstepline"
-  dataSource3 = data3
-  type3 = 'msspline'
-  dataSource4 = data4
-  type4 = 'stackedarea2d'
-  
   constructor() { }
 
   ngOnInit() {
+    this.initChart()
+    this.initChart1()
+    this.initChart2()
+    this.initChart3()
+  }
+
+  initChart() {
+    let chart = am4core.create("chartdiv", am4charts.XYChart);
+
+    // Add data
+    chart.data = [{
+      "year": 2005,
+      "income": 23.5,
+      "expenses": 18.1
+    }, {
+      "year": 2006,
+      "income": 26.2,
+      "expenses": 22.8
+    }, {
+      "year": 2007,
+      "income": 30.1,
+      "expenses": 23.9
+    }, {
+      "year": 2008,
+      "income": 29.5,
+      "expenses": 25.1
+    }, {
+      "year": 2009,
+      "income": 24.6,
+      "expenses": 25
+    }];
+
+    // Create axes
+    let categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+    categoryAxis.dataFields.category = "year";
+    categoryAxis.numberFormatter.numberFormat = "#";
+    categoryAxis.renderer.inversed = true;
+    categoryAxis.renderer.grid.template.location = 0;
+    categoryAxis.renderer.cellStartLocation = 0.1;
+    categoryAxis.renderer.cellEndLocation = 0.9;
+
+    let valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
+    valueAxis.renderer.opposite = true;
+
+    // Create series
+    function createSeries(field, name) {
+      let series = chart.series.push(new am4charts.ColumnSeries());
+      series.dataFields.valueX = field;
+      series.dataFields.categoryY = "year";
+      series.name = name;
+      //series.columns.template.tooltipText = "{name}: [bold]{valueX}[/]";
+      series.columns.template.height = am4core.percent(100);
+      series.sequencedInterpolation = true;
+
+      let valueLabel = series.bullets.push(new am4charts.LabelBullet());
+      valueLabel.label.text = "{valueX}";
+      valueLabel.label.horizontalCenter = "left";
+      valueLabel.label.dx = 10;
+      valueLabel.label.hideOversized = false;
+      valueLabel.label.truncate = false;
+
+      let categoryLabel = series.bullets.push(new am4charts.LabelBullet());
+      categoryLabel.label.text = "{name}";
+      categoryLabel.label.horizontalCenter = "right";
+      categoryLabel.label.dx = -10;
+      categoryLabel.label.fill = am4core.color("#fff");
+      categoryLabel.label.hideOversized = false;
+      categoryLabel.label.truncate = false;
+    }
+
+    createSeries("income", "Kerja");
+    createSeries("expenses", "Elaun");
+  }
+
+  initChart1() {
+    let chart = am4core.create("chartdiv1", am4charts.XYChart);
+
+    // Add data
+    chart.data = [{
+      "ax": 1,
+      "ay": 0.5,
+      "bx": 1,
+      "by": 2.2
+    }, {
+      "ax": 2,
+      "ay": 1.3,
+      "bx": 2,
+      "by": 4.9
+    }, {
+      "ax": 3,
+      "ay": 2.3,
+      "bx": 3,
+      "by": 5.1
+    }, {
+      "ax": 4,
+      "ay": 2.8,
+      "bx": 4,
+      "by": 5.3
+    }, {
+      "ax": 5,
+      "ay": 3.5,
+      "bx": 5,
+      "by": 6.1
+    }, {
+      "ax": 6,
+      "ay": 5.1,
+      "bx": 6,
+      "by": 8.3
+    }, {
+      "ax": 7,
+      "ay": 6.7,
+      "bx": 7,
+      "by": 10.5
+    }, {
+      "ax": 8,
+      "ay": 8,
+      "bx": 8,
+      "by": 12.3
+    }, {
+      "ax": 9,
+      "ay": 8.9,
+      "bx": 9,
+      "by": 14.5
+    }, {
+      "ax": 10,
+      "ay": 9.7,
+      "bx": 10,
+      "by": 15
+    }, {
+      "ax": 11,
+      "ay": 10.4,
+      "bx": 11,
+      "by": 18.8
+    }, {
+      "ax": 12,
+      "ay": 11.7,
+      "bx": 12,
+      "by": 19
+    }];
+
+    // Create axes
+    let valueAxisX = chart.xAxes.push(new am4charts.ValueAxis());
+    valueAxisX.title.text = 'X Axis';
+    valueAxisX.renderer.minGridDistance = 40;
+
+    // Create value axis
+    let valueAxisY = chart.yAxes.push(new am4charts.ValueAxis());
+    valueAxisY.title.text = 'Y Axis';
+
+    // Create series
+    let lineSeries = chart.series.push(new am4charts.LineSeries());
+    lineSeries.dataFields.valueY = "ay";
+    lineSeries.dataFields.valueX = "ax";
+    lineSeries.strokeOpacity = 0;
+
+    let lineSeries2 = chart.series.push(new am4charts.LineSeries());
+    lineSeries2.dataFields.valueY = "by";
+    lineSeries2.dataFields.valueX = "bx";
+    lineSeries2.strokeOpacity = 0;
+
+    // Add a bullet
+    let bullet = lineSeries.bullets.push(new am4charts.Bullet());
+
+    // Add a triangle to act as am arrow
+    let arrow = bullet.createChild(am4core.Triangle);
+    arrow.horizontalCenter = "middle";
+    arrow.verticalCenter = "middle";
+    arrow.strokeWidth = 0;
+    arrow.fill = chart.colors.getIndex(0);
+    arrow.direction = "top";
+    arrow.width = 12;
+    arrow.height = 12;
+
+    // Add a bullet
+    let bullet2 = lineSeries2.bullets.push(new am4charts.Bullet());
+
+    // Add a triangle to act as am arrow
+    let arrow2 = bullet2.createChild(am4core.Triangle);
+    arrow2.horizontalCenter = "middle";
+    arrow2.verticalCenter = "middle";
+    arrow2.rotation = 180;
+    arrow2.strokeWidth = 0;
+    arrow2.fill = chart.colors.getIndex(3);
+    arrow2.direction = "top";
+    arrow2.width = 12;
+    arrow2.height = 12;
+
+    //add the trendlines
+    let trend = chart.series.push(new am4charts.LineSeries());
+    trend.dataFields.valueY = "value2";
+    trend.dataFields.valueX = "value";
+    trend.strokeWidth = 2
+    trend.stroke = chart.colors.getIndex(0);
+    trend.strokeOpacity = 0.7;
+    trend.data = [
+      { "value": 1, "value2": 2 },
+      { "value": 12, "value2": 11 }
+    ];
+
+    let trend2 = chart.series.push(new am4charts.LineSeries());
+    trend2.dataFields.valueY = "value2";
+    trend2.dataFields.valueX = "value";
+    trend2.strokeWidth = 2
+    trend2.stroke = chart.colors.getIndex(3);
+    trend2.strokeOpacity = 0.7;
+    trend2.data = [
+      { "value": 1, "value2": 1 },
+      { "value": 12, "value2": 19 }
+    ];
+
+    //scrollbars
+    chart.scrollbarX = new am4core.Scrollbar();
+    chart.scrollbarY = new am4core.Scrollbar();
+  }
+
+  initChart2() {
+    let chart = am4core.create("chartdiv2", am4charts.SlicedChart);
+    chart.paddingBottom = 30;
+    chart.data = [{
+      "name": "Data #1",
+      "value": 600
+    }, {
+      "name": "Data #2",
+      "value": 300
+    }, {
+      "name": "Data #3",
+      "value": 200
+    }, {
+      "name": "Data #4",
+      "value": 180
+    }, {
+      "name": "Data #5",
+      "value": 50
+    }, {
+      "name": "Data #6",
+      "value": 20
+    }, {
+      "name": "Data #7",
+      "value": 280
+    }];
+
+    let series = chart.series.push(new am4charts.PyramidSeries());
+    series.dataFields.value = "value";
+    series.dataFields.category = "name";
+    series.alignLabels = true;
+    series.valueIs = "height";
+
+
+  }
+
+  initChart3() {
+    let chart = am4core.create("chartdiv3", am4charts.XYChart);
+    chart.scrollbarX = new am4core.Scrollbar();
+
+    // Add data
+    chart.data = [{
+      "country": "Jan",
+      "visits": 3025
+    }, {
+      "country": "Feb",
+      "visits": 1882
+    }, {
+      "country": "Mac",
+      "visits": 1809
+    }, {
+      "country": "Apr",
+      "visits": 1322
+    }, {
+      "country": "Mei",
+      "visits": 1122
+    }, {
+      "country": "Jun",
+      "visits": 1114
+    }, {
+      "country": "Jul",
+      "visits": 984
+    }, {
+      "country": "Ogs",
+      "visits": 711
+    }, {
+      "country": "Sep",
+      "visits": 665
+    }, {
+      "country": "Okt",
+      "visits": 580
+    }, {
+      "country": "Nov",
+      "visits": 443
+    }, {
+      "country": "Dis",
+      "visits": 441
+    }];
+
+    // Create axes
+    let categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+    categoryAxis.dataFields.category = "country";
+    categoryAxis.renderer.grid.template.location = 0;
+    categoryAxis.renderer.minGridDistance = 30;
+    categoryAxis.renderer.labels.template.horizontalCenter = "right";
+    categoryAxis.renderer.labels.template.verticalCenter = "middle";
+    categoryAxis.renderer.labels.template.rotation = 270;
+    categoryAxis.tooltip.disabled = true;
+    categoryAxis.renderer.minHeight = 110;
+
+    let valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+    valueAxis.renderer.minWidth = 50;
+
+    // Create series
+    let series = chart.series.push(new am4charts.ColumnSeries());
+    series.sequencedInterpolation = true;
+    series.dataFields.valueY = "visits";
+    series.dataFields.categoryX = "country";
+    series.tooltipText = "[{categoryX}: bold]{valueY}[/]";
+    series.columns.template.strokeWidth = 0;
+
+    series.tooltip.pointerOrientation = "vertical";
+
+    series.columns.template.column.cornerRadiusTopLeft = 10;
+    series.columns.template.column.cornerRadiusTopRight = 10;
+    series.columns.template.column.fillOpacity = 0.8;
+
+    // on hover, make corner radiuses bigger
+    let hoverState = series.columns.template.column.states.create("hover");
+    hoverState.properties.cornerRadiusTopLeft = 0;
+    hoverState.properties.cornerRadiusTopRight = 0;
+    hoverState.properties.fillOpacity = 1;
+
+    series.columns.template.adapter.add("fill", function (fill, target) {
+      return chart.colors.getIndex(target.dataItem.index);
+    });
+
+    // Cursor
+    chart.cursor = new am4charts.XYCursor();
+
   }
 
 }

@@ -10,6 +10,8 @@ import { SettingsComponent } from './settings/settings.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HelpdeskComponent } from './helpdesk/helpdesk.component';
 import { OvertimeWorkApplyComponent } from './overtime-work-apply/overtime-work-apply.component';
+import { WorkApplyComponent } from './work-apply/work-apply.component';
+import { WorkApplicationComponent } from './work-application/work-application.component';
 
 export const AdminRoutes: Routes = [
     {
@@ -63,6 +65,19 @@ export const AdminRoutes: Routes = [
             {
                 path: 'help',
                 component: HelpdeskComponent
+            },
+            {
+                path: 'work',
+                children: [
+                    {
+                        path: 'apply',
+                        component: WorkApplyComponent
+                    },
+                    {
+                        path: 'application',
+                        component: WorkApplicationComponent
+                    }
+                ]
             }
         ]
     }

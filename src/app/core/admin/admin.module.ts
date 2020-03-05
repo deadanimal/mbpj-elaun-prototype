@@ -5,7 +5,8 @@ import {
   ProgressbarModule, 
   TooltipModule, 
   BsDatepickerModule,
-  ModalModule
+  ModalModule,
+  AccordionModule
 } from 'ngx-bootstrap';
 import { RouterModule } from '@angular/router';
 
@@ -27,6 +28,8 @@ import { OvertimeApplyComponent } from './overtime-apply/overtime-apply.componen
 import { OvertimeClaimComponent } from './overtime-claim/overtime-claim.component';
 import { HelpdeskComponent } from './helpdesk/helpdesk.component';
 import { OvertimeWorkApplyComponent } from './overtime-work-apply/overtime-work-apply.component';
+import { WorkApplyComponent } from './work-apply/work-apply.component';
+import { WorkApplicationComponent } from './work-application/work-application.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,9 @@ import { OvertimeWorkApplyComponent } from './overtime-work-apply/overtime-work-
     OvertimeApplyComponent,
     OvertimeClaimComponent,
     HelpdeskComponent,
-    OvertimeWorkApplyComponent
+    OvertimeWorkApplyComponent,
+    WorkApplyComponent,
+    WorkApplicationComponent
   ],
   imports: [
     CommonModule,
@@ -51,7 +56,8 @@ import { OvertimeWorkApplyComponent } from './overtime-work-apply/overtime-work-
     HttpClientModule,
     LeafletModule,
     BsDatepickerModule.forRoot(),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    AccordionModule.forRoot()
   ]
 })
 export class AdminModule { }

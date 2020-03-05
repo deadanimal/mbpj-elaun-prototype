@@ -32,15 +32,26 @@ export const ROUTES: RouteInfo[] = [
   },
   {
     path: '/admin/overtime',
-    title: 'Elaun Lebih Masa',
+    title: 'Elaun',
     type: 'sub',
     icontype: 'fas fa-file-invoice-dollar text-green',
     collapse: 'elaun',
     isCollapsed: true,
     children: [
-      { path: 'application', title: 'Permohonan', type: 'link' },
-      { path: 'claim', title: 'Tuntutan', type: 'link' },
-      { path: 'claim', title: 'Mohon Kerja Lebih Masa', type: 'link' }
+      { path: 'application', title: 'Senarai Permohonan', type: 'link' },
+      { path: 'claim', title: 'Senarai Lulus', type: 'link' },
+    ]
+  },
+  {
+    path: '/admin/work',
+    title: 'Kerja',
+    type: 'sub',
+    icontype: 'fas fa-th-list text-purple',
+    collapse: 'elaun',
+    isCollapsed: true,
+    children: [
+      { path: 'apply', title: 'Mohon', type: 'link' },
+      { path: 'application', title: 'Senarai Permohonan', type: 'link' }
     ]
   },
   {
